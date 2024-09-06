@@ -10,10 +10,15 @@ class Quiz extends Model
     use HasFactory;
 
     public function users(){
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function results(){
-        $this->hasMany(Result::class);
+        return $this->hasMany(Result::class);
     }
+
+    public function questions() {
+        return $this->hasMany(Question::class);
+    }
+    
 }

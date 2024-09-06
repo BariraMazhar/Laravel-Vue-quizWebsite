@@ -49,27 +49,27 @@ class User extends Authenticatable
     }
 
     public function roles(){
-        $this->belongsToMany(Role::class);
+        return $this->belongsToMany(Role::class);
     }
 
     public function quizes(){
-        $this->hasMany(Quiz::class);
+        return $this->hasMany(Quiz::class);
     }
 
     public function quizAttempts(){
-        $this->hasMany(QuizAttempt::class);
+        return $this->hasMany(QuizAttempt::class);
     }
 
     public function result(){
-        $this->hasMany(Result::class);
+        return $this->hasMany(Result::class);
     }
 
     public function subscription(){
-        $this->hasOne(Subscription::class);
+        return $this->hasOne(Subscription::class);
     }
 
     public function notifications()
     {
-     $this->belongsToMany(Notification::class);   
+        return $this->belongsToMany(Notification::class);   
     }
 }
