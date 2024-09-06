@@ -10,6 +10,6 @@ class Notification extends Model
     use HasFactory;
 
     public function users(){
-     $this->belongsToMany(User::class);   
+     return $this->belongsToMany(User::class);   
     }
 }
