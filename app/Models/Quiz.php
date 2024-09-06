@@ -13,11 +13,11 @@ class Quiz extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function results(){
+    public function result(){
         return $this->hasMany(Result::class);
     }
 
-    public function questions() {
+    public function question() {
         return $this->hasMany(Question::class);
     }
     

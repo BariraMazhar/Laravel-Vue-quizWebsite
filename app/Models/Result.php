@@ -13,7 +13,7 @@ class Result extends Model
      return $this->belongsTo(User::class);   
     }
 
-    public function quizzes(){
+    public function quiz(){
         return $this->belongsToMany(Quiz::class);
     }
 }
